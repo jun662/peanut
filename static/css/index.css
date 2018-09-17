@@ -1,0 +1,327 @@
+/*shortcut 变色属性 start*/
+.main{
+    color: #fff;
+}
+.main .register a{
+    color: #fff;
+}
+.main .login a{
+    color: #fff;
+}
+.main .nav-list a{
+    color: #fff;
+}
+.main .register a:hover{
+    color: #22ac38;
+}
+.main .login a:hover{
+    color: #22ac38;
+}
+.main .nav-list a:hover{
+    color: #22ac38;
+}
+.main .nav-list a.active{
+    color: #fff;
+}
+.header_phone{
+    color: #fff;
+}
+.spacer{
+    background-color: #fff;
+}
+.bg_w .main{
+    color: black;
+}
+.bg_w .register a{
+    color: black;
+}
+.bg_w .login a{
+    color: black;
+}
+.bg_w .nav-list a{
+    color: black;
+}
+.bg_w .register a:hover{
+    color: #22ac38;
+}
+.bg_w .login a:hover{
+    color: #22ac38;
+}
+.bg_w .nav-list a:hover{
+    color: #22ac38;
+}
+.bg_w .nav-list a.active{
+    color: black;
+}
+.bg_w .header_phone{
+    color: black;
+}
+.bg_w .spacer{
+    background-color: black;
+}
+/*shortcut 变色属性 end*/
+/*首页轮播图 jq版本*/
+.slider {
+    height: 416px;
+    width: 100%;
+    position: relative;
+}
+
+.slider .img_part li {
+    width: 100%;
+    height: 416px;
+    position: absolute;
+    display: none;
+}
+.slider img{
+    width: 100%;
+    height: 416px;
+}
+
+.slider li:first-child {
+    display: block;
+}
+
+.arrow {
+    display: none;
+}
+
+.slider:hover .arrow {
+    display: block;
+}
+
+.arrow-left, .arrow-right {
+    font-family: "SimSun", "宋体";
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+.arrow-left {
+    left: 0;
+}
+.arrow-right {
+    right: 0;
+}
+.point{
+    position: relative;
+    width:100px;
+    margin:auto;
+    top: 320px;
+    display: none;
+}
+.slider:hover .point{
+    display: block;
+}
+.point li{
+    width:10px;
+    height:10px;
+    border-radius:5px;
+    background:#333;
+    cursor:pointer;
+    float:left;
+    margin:5px;
+    position:relative;
+    z-index:15;
+}
+.point .yellow{
+    background:yellow;
+}
+
+
+/*我要买车 页头框*/
+.entry-buycar {
+    width: 728px;
+}
+
+.index-entry-buysell {
+    position: relative;
+    z-index: 3;
+    height: 256px;
+    margin-top: -64px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #dfe3e3;
+    border-top: 0;
+    box-shadow: 0 1px 4px 0 rgba(88, 100, 117, .2);
+    border-radius: 6px;
+}
+.index-entry-buysell a:hover{
+    color: #22ac38;
+}
+.entry-title {
+    padding-top: 24px;
+    padding-left: 44px;
+}
+.entry-title a {
+    font-size: 20px;
+    color: #495056;
+    line-height: 45px;
+}
+.entry-title a i{
+    font-family: "icomoon";
+    font-style: normal;
+    text-align: center;
+    line-height: 20px;
+    color: #495056;
+}
+.search {
+    width: 330px;
+    height: 47px;
+    margin-top: 0;
+}
+.buycar-brand {
+    padding-top: 65px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+.buycar-brand a {
+    float: left;
+    width: 100px;
+    height: 22px;
+    color: #495056;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+}
+.buycar-brand a:hover{
+    color: #22ac38;
+}
+.buycar-brand a i{
+    font-family: "icomoon";
+    font-style: normal;
+    text-align: center;
+    line-height: 15px;
+    color: #495056;
+}
+.buycar-brand a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.buycar-brand .icon-buycar-more {
+    position: relative;
+    margin-right: 0;
+    width: 80px;
+    text-align: right;
+    padding-right: 5px;
+}
+.buycar-price {
+    padding-top: 35px;
+    padding-left: 20px;
+    line-height: 0;
+    height: 40px;
+}
+.buycar-price a {
+    display: inline-block;
+    height: 44px;
+    font-size: 14px;
+    color: #495056;
+    line-height: 44px;
+    width: 100px;
+    float: left;
+    text-align: center;
+}
+.buycar-type {
+    padding-top: 8px;
+    padding-left: 20px;
+    line-height: 0;
+    height: 40px;
+}
+.buycar-type a {
+    display: inline-block;
+    height: 44px;
+    font-size: 14px;
+    color: #495056;
+    line-height: 44px;
+    width: 100px;
+    float: left;
+    text-align: center;
+}
+/*买车 end*/
+/*卖车 start*/
+.entry-title-sell {
+    padding-top: 24px;
+}
+.entry-title-sell a {
+    font-size: 20px;
+    color: #495056;
+    line-height: 45px;
+}
+.entry-title-sell a i{
+    font-family: "icomoon";
+    font-style: normal;
+    text-align: center;
+    line-height: 20px;
+    color: #495056;
+}
+.entry-sellcar {
+    width: 370px;
+    padding-right: 48px;
+}
+.sellcar-show {
+    position: relative;
+    font-size: 16px;
+    color: #a8abae;
+    text-align: right;
+    overflow: hidden;
+    height: 45px;
+    line-height: 12px;
+}
+.amount span {
+    font-family: Tahoma;
+    font-size: 24px;
+    color: #3cb46d;
+    padding: 0 5px;
+}
+.sellcar-phone {
+    position: relative;
+    width: 370px;
+}
+.phone-input {
+    float: left;
+    width: 328px;
+    height: 18px;
+    line-height: 18px;
+    padding: 13px 10px 14px 30px;
+    font-size: 18px;
+    color: #495056;
+    border: 1px solid #f5f5f7;
+    border-radius: 5px;
+    background-color: #f5f5f7;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.phone-btn-sell {
+    background: #3cb46d;
+}
+.phone-btn-eval, .phone-btn-sell {
+    float: left;
+    width: 179px;
+    height: 64px;
+    margin-right: 11px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.phone-btn-eval {
+    background: #8ec500;
+    margin-right: 0px;
+}

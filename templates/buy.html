@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我要买车</title>
+        {% load static %}
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buy.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+</head>
+<body>
+<!--shortcut start-->
+{% include 'content/shortcut.html' %}
+<!--shortcut end-->
+    <div class="content-list">
+        <div class="w1200">
+            <div class="c-list">
+                <ul class="carlist clearfix">
+                    {% for car in cars_result %}
+                    <li>
+                        <a class="car-a" href="{{ car.id }}">
+                            <img src="/static/{{ car.car_mainpic }}" alt="宝马">
+                            <h2 class="t">{{ car.car_title }}</h2>
+                            <div class="t-price">
+                                <!-- 价格 -->
+                                <p>{{ car.car_buy_price }}<span>万</span></p>
+                                <!-- 标签 -->
+                                <em class="line-through">{{ car.car_price }}万</em>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!--footer start-->
+{% include 'content/footer.html' %}
+<!--footer end-->
+</body>
+<script src="{% static 'js/base.js' %}"></script>
+</html>

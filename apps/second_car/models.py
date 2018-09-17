@@ -27,6 +27,7 @@ class CarDetail(models.Model):
     drive=models.CharField(max_length=10,verbose_name='驱动类型')
     country=models.CharField(max_length=10,verbose_name='国别')
     status_choice=((0,'下线'),(1,"上线"))
+    car_price=models.DecimalField(max_digits=10,decimal_places=2,verbose_name='二手车价格')
     status=models.IntegerField(default=1,choices=status_choice,verbose_name='车辆出售状态')
     caruser=models.ForeignKey('user.PeanutInfo',verbose_name="所属用户")
     stype=models.ForeignKey('CarStyle',verbose_name='所属车型')

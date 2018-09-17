@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>【杭州二手车_杭州二手车交易市场】-花生二手车直卖网</title>
+    <meta name="description" content="花生杭州二手车,直面个人买家,好车卖出好价,花生二手车均经过259项检测,标准无事故,优质个人二手车,14天可退1年质保,个人二手车买卖首选花生二手车直卖网!">
+    {% load static %}
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+</head>
+
+<body>
+    <!--header start-->
+    <!--shortcut start-->
+    {% include 'content/shortcut.html' %}
+
+    <!--shortcut end-->
+    <!--轮播图 jq版本-->
+    <div class="slider">
+        <ul class="img_part">
+            <li><a href="#"><img src="{% static 'images/lunbo1.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'images/lunbo2.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'images/lunbo3.png' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'images/lunbo4.jpg' %}" alt=""></a></li>
+            <li><a href="#"><img src="{% static 'images/lunbo5.png' %}" alt=""></a></li>
+        </ul>
+        <!--箭头-->
+        <div class="arrow">
+            <span class="arrow-left">&lt;</span>
+            <span class="arrow-right">&gt;</span>
+        </div>
+        <ul class="point">
+            <li class="yellow"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+        <!--页头框-->
+        <div class="index-entry-buysell w1200">
+            <!--我要买车-->
+            <div class="entry-buycar fl">
+                <div class="entry-title">
+                    <a href="#" class="fl">
+                        我要买车
+                        <i></i>
+                    </a>
+                    <div class="search fr"></div>
+                </div>
+                <div class="buycar-brand clearfix">
+                    <a href="#">
+                        <img src="{% static 'images/dazhong.png' %}">
+                        大众
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/buick.png' %}">
+                        别克
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/bmw.png' %}">
+                        宝马
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/ford.png' %}">
+                        福特
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/benz.png' %}">
+                        奔驰
+                    </a>
+                    <a href="#">
+                        <img src="{% static 'images/audi.png' %}">
+                        奥迪
+                    </a>
+                    <a href="#" class="icon-buycar-more">
+                        <i></i>
+                        更多
+                    </a>
+                </div>
+                <div class="buycar-price">
+                    <a href="#">3万以下</a>
+                    <a href="#">3-5万</a>
+                    <a href="#">5-7万</a>
+                    <a href="#">7-9万</a>
+                    <a href="#">9-12万</a>
+                    <a href="#">12-16万</a>
+                    <a href="#">16-20万</a>
+                </div>
+                <div class="buycar-type">
+                    <a href="#">超值</a>
+                    <a href="#">急售</a>
+                    <a href="#">新手车</a>
+                    <a href="#">准新车</a>
+                    <a href="#">保卖车</a>
+                    <a href="#">SUV</a>
+                    <a href="#">MPV</a>
+                </div>
+            </div>
+            <!--我要卖车-->
+            <div class="entry-sellcar fr">
+                <div class="entry-title-sell">
+                    <a href="#" class="fl">
+                        我要卖车
+                        <i></i>
+                    </a>
+                    <div class="sellcar-show">
+                        <p class="amount">
+                            已有
+                            <span>45852216</span>
+                            人提交申请
+                        </p>
+                    </div>
+                    <div class="sellcar-box">
+                        <div class="sellcar-phone">
+                            <input class="phone-input" maxlength="11" placeholder="请输入您的手机号">
+                            <p class="phone-error js-phone-error"></p>
+                            <button class="phone-btn-sell" position="4">我要卖车</button>
+                            <button class="phone-btn-eval" >免费估价</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--header end-->
+    <!--footer start-->
+    {% include 'content/footer.html' %}
+    <!--footer end-->
+
+</body>
+
+<script src="{% static "js/index.js" %}"></script>
+<script src="{% static "js/base.js" %}"></script>
+</html>

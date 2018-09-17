@@ -1,0 +1,12 @@
+.spanerror{
+    background-image: url(../images/sprit3.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: -94px -31px;
+}
+.iphone{
+    font-family: "icomoon";
+    font-style: normal;
+    text-align: center;
+    line-height: 20px;
+}

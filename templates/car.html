@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{#    {% if car_result %}#}
+    <meta charset="UTF-8">
+    <title>{{ car_result.car_title }}</title>
+    <link rel="icon" href="../static/favicon.ico">
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/icon.css">
+    <link rel="stylesheet" href="../static/css/car.css">
+    <script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<!--shortcut start-->
+    {% include 'content/shortcut.html' %}
+<!--shortcut end-->
+    <div class="center w1200">
+        <div class="left-nav fl">
+            <a href="#">首页</a>>
+            <a href="#">首页</a>>
+            <a href="#">首页</a>>
+            <a href="#">首页</a>>{{ car_result.car_title }}
+        </div>
+        <div class="carnumber fr">
+            车源号：HC-42965744&emsp;&emsp;
+            <span class="car-error fr">
+                <span class="spanerror"></span>车辆信息纠错
+            </span>
+        </div>
+        <div class="infor-main">
+            <div class="car-detail fl"></div>
+            <div class="car-textbox fl">
+                <h2 class="titlebox">
+                    {{ car_result.car_title }}
+                    <span class="labels baomai">保卖车</span>
+                    <span class="labels">4s保养</span>
+                    <span class="labels">0过户</span>
+                </h2>
+                <ul class="assort">
+                    <li>
+                        <span>{{ car_result.car_year }}</span>
+                        上牌时间
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <span>{{ car_result.car_km }}万公里</span>
+                        表显里程
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <span>{{ car_result.car_address.area_name }}</span>
+                        上牌地
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <span>{{ car_result.car_output }}</span>
+                        排量
+                    </li>
+                    <li class="spacer"></li>
+                    <li>
+                        <span>自动</span>
+                        变速箱
+                    </li>
+                </ul>
+                <div class="pricebox">
+                    <span class="pricetype">
+                        ¥{{ car_result.car_buy_price }}
+                        <span class="f14">万</span>
+                    </span>
+                    <span class="newcarprice">
+                            新车指导价{{ car_result.car_price }}万(含税)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--车辆图片 开始-->
+        <div class="carimg">
+            <div class="titlediv">
+                <span>车辆图片</span>
+            </div>
+        </div>
+        <!--车辆图片 结束-->
+        <!--基本信息 开始-->
+        <div class="basicinfo">
+            <div class="titlediv">
+                <span>基本信息</span>
+            </div>
+            <dl class="people-infor">
+                <dt>
+                    <span class="f20">车主：{{ car_result.car_username.nic_name }}</span>
+                    <a class="btn-phone"><i class="iphone"></i>咨询看车</a>
+                </dt>
+                <dd>
+                    <span class="type-gray">城市道路行驶</span>
+                    <span class="type-gray">上下班代步</span>
+                    <span class="type-gray">修理厂保养</span>
+                    <span class="type-gray">出国卖车</span>
+                    <span class="type-gray">电动天窗</span>
+                    <span class="type-gray">皮质座椅</span>
+                    <span class="type-gray">多功能方向盘</span>
+                    <span class="type-gray">倒车雷达</span>
+                </dd>
+            </dl>
+            <ul class="assort">
+                <li>
+                    <span>{{ car_result.car_year }}</span>
+                    上牌时间
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_km }}万公里</span>
+                    表显里程
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_address.area_name }}</span>
+                    上牌地
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_output_standard }}</span>
+                    迁入地为准
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>自动</span>
+                    变速箱
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_output }}</span>
+                    排量
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_transfer }}次过户</span>
+                    登记证为准
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>西湖</span>
+                    看车地址
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_yearcheck }}</span>
+                    年检到期
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_yearcheck }}</span>
+                    交强险
+                </li>
+                <li class="spacer"></li>
+                <li>
+                    <span>{{ car_result.car_yearcheck }}</span>
+                    商业险
+                </li>
+            </ul>
+        </div>
+        <!--基本信息 结束-->
+        <!--浏览记录 开始-->
+        <div class="readhistory">
+            <div class="titlediv">
+                <span>浏览记录</span>
+            </div>
+        </div>
+        <!--浏览记录 结束-->
+    </div>
+<!--footer start-->
+{% include 'content/footer.html' %}
+<!--footer end-->
+
+
+</body>
+<script src="/static/js/base.js"></script>
+{#{% endif %}#}
+</html>

@@ -1,0 +1,74 @@
+.shortcut{
+    height: 65px;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 1px 0 4px #e6e6e6;
+    background-color: #fff;
+}
+a.active{
+    text-decoration: none;
+    border-bottom: 2px solid #22ac38;
+}
+/*content-list start*/
+.carlist {
+    width: 1220px;
+    display: block;
+    margin-left: -10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.carlist li{
+    float: left;
+    width: 305px;
+    height: 307px;
+    margin-bottom: 10px;
+}
+
+.carlist li a {
+    display: block;
+    width: 287px;
+    height: 287px;
+    padding: 9px 8px;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.carlist img {
+    width: 285px;
+    height: 190px;
+    border: 1px solid #e9e9e9;
+}
+
+.carlist li a.car-a .t {
+    font-size: 17px;
+    color: #495056;
+    font-weight: 400;
+    margin: 0;
+    padding: 1px 0 6px 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.carlist li .t-price {
+    font-size: 20px;
+    color: #f95523;
+    padding-left: 4px;
+}
+.t-price p {
+    margin: 0;
+    float: left;
+    line-height: 30px;
+}
+
+.t-price span {
+    font-size: 14px;
+}
+.t-price em {
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    color: #a5abb2;
+    font-size: 14px;
+}
+.t-price em.line-through {
+    text-decoration: line-through;
+}

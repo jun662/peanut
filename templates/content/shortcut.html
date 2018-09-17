@@ -1,0 +1,204 @@
+
+
+    <!--shortcut start-->
+    <div class="shortcut">
+        <!--弹窗蒙层-->
+        <div class="pop-mask" id="mask"></div>
+        <!--登陆弹窗-->
+        <div class="pop-box pop-login" id="login1">
+            <form action="/user/register_post" method="post">
+                {% csrf_token %}
+                <div class="pop-close" id="close-button">
+                    <i></i>
+                </div>
+                <p class="pop-tit">花生二手车直卖网</p>
+                <ul class="user-login">
+                    <li>
+                        <p class="user-login-tit">用户名</p>
+                        <input name="username" class="user-login-input" placeholder="请输入您的用户名">
+                    </li>
+                    <li>
+                        <p class="user-login-tit">密 码</p>
+                        <input type="password" name="password" class="user-login-input" placeholder="请输入密码">
+                    </li>
+                    <li>
+                        <p class="user-login-tit">验证码</p>
+                        <input type="password" name="password" class="check_code-input" placeholder="请输入验证码">
+                        <a class="check_code-img" >
+                            <img src="/checkcode.html" onclick="this.src='/checkcode.html?'+new Date().getTime();">
+                        </a>
+                    </li>
+
+                </ul>
+                <p class="p-error" id="loginError1"></p>
+                <button class="sub-btn " type="submit">登录</button>
+                <p class="free-phone">免费咨询400-069-6530</p>
+                <p class="agree-text">登录即视为同意<a href="#" data-gzlog="#">《用户使用协议》</a>及<a href="#" data-gzlog="#">《隐私权条款》</a></p>
+            </form>
+        </div>
+        <!--注册弹窗-->
+        <div class="pop-box pop-register" id="register1">
+            <form action="/user/rpost" method="post">
+                <div class="pop-close" id="close-button-2">
+                    <i></i>
+                </div>
+                <p class="pop-tit">花生二手车直卖网</p>
+                <ul class="user-login">
+                    <li>
+                        <p class="user-login-tit"> 用户名</p>
+                        <input name="username" id="username" class="user-login-input" placeholder="请输入您的用户名">
+                        <span class="eroor_msg"></span>
+                    </li>
+                    <li>
+                        <p class="user-login-tit">  邮箱</p>
+                        <input name="email" id="email" class="user-login-input" placeholder="请输入您的邮箱">
+                        <span class="eroor_msg"></span>
+                    </li>
+                    <li>
+                        <p class="user-login-tit">  密码</p>
+                        <input type="password" id="pwd" name="password" class="user-login-input" placeholder="请输入您的密码">
+                        <span class="eroor_msg"></span>
+                    </li>
+                    <li>
+                        <p class="user-login-tit">确认密码</p>
+                        <input type="password" id="re_pwd" name="pwd" class="user-login-input" placeholder="请再次输入密码">
+                        <span class="error_msg"></span>
+                    </li>
+                    <li>
+                        <p class="user-login-tit">  性别</p>
+                        <div class="user-register-sex">
+                            <input type="radio" name="sex" value="1" class="user-login-radio" checked><label>男</label>  
+                            <input type="radio" name="sex" value="2" class="user-login-radio"><label>女</label>
+                        </div>
+                        <span class="error_msg"></span>
+                    </li>
+                </ul>
+                <p class="p-error" id="registerError1"></p>
+                <button class="sub-btn" type="submit">注册</button>
+                <p class="free-phone">免费咨询400-069-6530</p>
+                <p class="agree-text">注册即视为同意<a href="#" data-gzlog="#">《用户使用协议》</a>及<a href="#" data-gzlog="#">《隐私权条款》</a></p>
+            </form>
+        </div>
+        <div class="main w1200" id="main">
+            <h1 class="fl">
+                <a href="#" title="花生二手车">花生二手车</a>
+            </h1>
+            <div class="city fl" id="city">
+                <p class="city_curr">
+                    杭州
+                    <i ></i>
+                </p>
+                <div class="white-line"></div>
+                <div class="city-box all-city">
+                    <dl class="bdb-n">
+                        <dt class="green-tit">周边</dt>
+                        <dd>
+                            <a href="/tj/buy/" title="天津二手车">天津</a>
+                            <a href="/tangshan/buy/" title="唐山二手车">唐山</a>
+                            <a href="/sjz/buy/" title="石家庄二手车">石家庄</a>
+                            <a href="/qinhuangdao/buy/" title="秦皇岛二手车">秦皇岛</a>
+                            <a href="/xingtai/buy/" title="邢台二手车">邢台</a>
+                            <a href="/chengde/buy/" title="承德二手车">承德</a>
+                            <a href="/hengshui/buy/" title="衡水二手车">衡水</a>
+                            <a href="/langfang/buy/" title="廊坊二手车">廊坊</a>
+                        </dd>
+                    </dl>
+                    <dl class="bdb-s">
+                        <dt class="green-tit">热门</dt>
+                        <dd>
+                            <a href="/www/buy/" title="全国二手车">全国</a><a class="on" href="/bj/buy/" title="北京二手车">北京</a><a href="/sh/buy/" title="上海二手车">上海</a><a href="/gz/buy/" title="广州二手车">广州</a><a href="/sz/buy/" title="深圳二手车">深圳</a><a href="/cd/buy/" title="成都二手车">成都</a><a href="/cq/buy/" title="重庆二手车">重庆</a><a href="/hz/buy/" title="杭州二手车">杭州</a><a href="/su/buy/" title="苏州二手车">苏州</a><a href="/sy/buy/" title="沈阳二手车">沈阳</a><a href="/wh/buy/" title="武汉二手车">武汉</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>A</dt>
+                        <dd>
+                            <a href="/anqing/buy/" title="安庆">安庆</a><a href="/anshan/buy/" title="鞍山">鞍山</a><a href="/anyang/buy/" title="安阳">安阳</a></dd></dl><dl>
+                    <dt>B</dt>
+                    <dd>
+                        <a href="/baoding/buy/" title="保定">保定</a><a href="/baoji/buy/" title="宝鸡">宝鸡</a><a href="/baotou/buy/" title="包头">包头</a><a class="on" href="/bj/buy/" title="北京">北京</a><a href="/bengbu/buy/" title="蚌埠">蚌埠</a><a href="/bijie/buy/" title="毕节">毕节</a><a href="/binzhou/buy/" title="滨州">滨州</a><a href="/baodi/buy/" title="宝坻">宝坻</a><a href="/binhaixinqu/buy/" title="滨海新区">滨海新区</a></dd></dl><dl>
+                    <dt>C</dt>
+                    <dd>
+                        <a href="/cangzhou/buy/" title="沧州">沧州</a><a href="/cc/buy/" title="长春">长春</a><a href="/changde/buy/" title="常德">常德</a><a href="/cs/buy/" title="长沙">长沙</a><a href="/changzhi/buy/" title="长治">长治</a><a href="/changzhou/buy/" title="常州">常州</a><a href="/chengde/buy/" title="承德">承德</a><a href="/cd/buy/" title="成都">成都</a><a href="/chenzhou/buy/" title="郴州">郴州</a><a href="/cq/buy/" title="重庆">重庆</a><a href="/changshou/buy/" title="长寿">长寿</a><a href="/changshugz/buy/" title="常熟">常熟</a></dd></dl><dl>
+                    <dt>D</dt>
+                    <dd>
+                        <a href="/dl/buy/" title="大连">大连</a><a href="/dandong/buy/" title="丹东">丹东</a><a href="/daqing/buy/" title="大庆">大庆</a><a href="/datong/buy/" title="大同">大同</a><a href="/dazhou/buy/" title="达州">达州</a><a href="/deyang/buy/" title="德阳">德阳</a><a href="/dezhou/buy/" title="德州">德州</a><a href="/dg/buy/" title="东莞">东莞</a><a href="/dongying/buy/" title="东营">东营</a><a href="/dagang/buy/" title="大港">大港</a><a href="/dayi/buy/" title="大邑">大邑</a><a href="/dujiangyan/buy/" title="都江堰">都江堰</a></dd></dl><dl>
+                    <dt>E</dt>
+                    <dd>
+                        <a href="/eerduosi/buy/" title="鄂尔多斯">鄂尔多斯</a><a href="/enshi/buy/" title="恩施">恩施</a><a href="/ezhou/buy/" title="鄂州">鄂州</a></dd></dl><dl>
+                    <dt>F</dt>
+                    <dd>
+                        <a href="/foshan/buy/" title="佛山">佛山</a><a href="/fushun/buy/" title="抚顺">抚顺</a><a href="/fuyang/buy/" title="阜阳">阜阳</a><a href="/fz/buy/" title="福州">福州</a><a href="/fuling/buy/" title="涪陵">涪陵</a></dd></dl><dl>
+                    <dt>G</dt>
+                    <dd>
+                        <a href="/ganzhou/buy/" title="赣州">赣州</a><a href="/guangan/buy/" title="广安">广安</a><a href="/guangyuan/buy/" title="广元">广元</a><a href="/gz/buy/" title="广州">广州</a><a href="/gl/buy/" title="桂林">桂林</a><a href="/gy/buy/" title="贵阳">贵阳</a></dd></dl><dl>
+                    <dt>H</dt>
+                    <dd>
+                        <a href="/hrb/buy/" title="哈尔滨">哈尔滨</a><a href="/handan/buy/" title="邯郸">邯郸</a><a href="/hz/buy/" title="杭州">杭州</a><a href="/hf/buy/" title="合肥">合肥</a><a href="/hengshui/buy/" title="衡水">衡水</a><a href="/hengyang/buy/" title="衡阳">衡阳</a><a href="/heze/buy/" title="菏泽">菏泽</a><a href="/huaian/buy/" title="淮安">淮安</a><a href="/huaibei/buy/" title="淮北">淮北</a><a href="/huainan/buy/" title="淮南">淮南</a><a href="/huanggang/buy/" title="黄冈">黄冈</a><a href="/huangshi/buy/" title="黄石">黄石</a><a href="/nmg/buy/" title="呼和浩特">呼和浩特</a><a href="/huizhou/buy/" title="惠州">惠州</a><a href="/huzhou/buy/" title="湖州">湖州</a><a href="/hangu/buy/" title="汉沽">汉沽</a><a href="/hechuan/buy/" title="合川">合川</a></dd></dl><dl>
+                    <dt>J</dt>
+                    <dd>
+                        <a href="/jiamusi/buy/" title="佳木斯">佳木斯</a><a href="/jian/buy/" title="吉安">吉安</a><a href="/jiangmen/buy/" title="江门">江门</a><a href="/jiaozuo/buy/" title="焦作">焦作</a><a href="/jiaxing/buy/" title="嘉兴">嘉兴</a><a href="/jieyang/buy/" title="揭阳">揭阳</a><a href="/jilin/buy/" title="吉林">吉林</a><a href="/jn/buy/" title="济南">济南</a><a href="/jingmen/buy/" title="荆门">荆门</a><a href="/jingzhou/buy/" title="荆州">荆州</a><a href="/jinhua/buy/" title="金华">金华</a><a href="/jining/buy/" title="济宁">济宁</a><a href="/jinzhong/buy/" title="晋中">晋中</a><a href="/jinzhou/buy/" title="锦州">锦州</a><a href="/jiujiang/buy/" title="九江">九江</a><a href="/jiangyin/buy/" title="江阴">江阴</a><a href="/jinghai/buy/" title="静海">静海</a><a href="/jinnan/buy/" title="津南">津南</a></dd></dl><dl>
+                    <dt>K</dt>
+                    <dd>
+                        <a href="/kaifeng/buy/" title="开封">开封</a><a href="/km/buy/" title="昆明">昆明</a><a href="/kaixian/buy/" title="开县">开县</a><a href="/kunshangz/buy/" title="昆山">昆山</a></dd></dl><dl>
+                    <dt>L</dt>
+                    <dd>
+                        <a href="/langfang/buy/" title="廊坊">廊坊</a><a href="/lz/buy/" title="兰州">兰州</a><a href="/leshan/buy/" title="乐山">乐山</a><a href="/lianyungang/buy/" title="连云港">连云港</a><a href="/liaocheng/buy/" title="聊城">聊城</a><a href="/liaoyang/buy/" title="辽阳">辽阳</a><a href="/linfen/buy/" title="临汾">临汾</a><a href="/linyi/buy/" title="临沂">临沂</a><a href="/lishui/buy/" title="丽水">丽水</a><a href="/liuzhou/buy/" title="柳州">柳州</a><a href="/longyan/buy/" title="龙岩">龙岩</a><a href="/loudi/buy/" title="娄底">娄底</a><a href="/luan/buy/" title="六安">六安</a><a href="/luoyang/buy/" title="洛阳">洛阳</a><a href="/luzhou/buy/" title="泸州">泸州</a></dd></dl><dl>
+                    <dt>M</dt>
+                    <dd>
+                        <a href="/maanshan/buy/" title="马鞍山">马鞍山</a><a href="/maoming/buy/" title="茂名">茂名</a><a href="/meishan/buy/" title="眉山">眉山</a><a href="/mianyang/buy/" title="绵阳">绵阳</a><a href="/mudanjiang/buy/" title="牡丹江">牡丹江</a></dd></dl><dl>
+                    <dt>N</dt>
+                    <dd>
+                        <a href="/nc/buy/" title="南昌">南昌</a><a href="/nanchong/buy/" title="南充">南充</a><a href="/nj/buy/" title="南京">南京</a><a href="/nn/buy/" title="南宁">南宁</a><a href="/nanping/buy/" title="南平">南平</a><a href="/nantong/buy/" title="南通">南通</a><a href="/nanyang/buy/" title="南阳">南阳</a><a href="/neijiang/buy/" title="内江">内江</a><a href="/nb/buy/" title="宁波">宁波</a><a href="/ningde/buy/" title="宁德">宁德</a></dd></dl><dl>
+                    <dt>P</dt>
+                    <dd>
+                        <a href="/pingdingshan/buy/" title="平顶山">平顶山</a><a href="/putian/buy/" title="莆田">莆田</a><a href="/puyang/buy/" title="濮阳">濮阳</a><a href="/pingdu/buy/" title="平度">平度</a></dd></dl><dl>
+                    <dt>Q</dt>
+                    <dd>
+                        <a href="/qd/buy/" title="青岛">青岛</a><a href="/qingyuan/buy/" title="清远">清远</a><a href="/qinhuangdao/buy/" title="秦皇岛">秦皇岛</a><a href="/qiqihaer/buy/" title="齐齐哈尔">齐齐哈尔</a><a href="/quanzhou/buy/" title="泉州">泉州</a><a href="/qujing/buy/" title="曲靖">曲靖</a><a href="/quzhou/buy/" title="衢州">衢州</a><a href="/qijiang/buy/" title="綦江">綦江</a></dd></dl><dl>
+                    <dt>R</dt>
+                    <dd>
+                        <a href="/rizhao/buy/" title="日照">日照</a></dd></dl><dl>
+                    <dt>S</dt>
+                    <dd>
+                        <a href="/sanming/buy/" title="三明">三明</a><a href="/sh/buy/" title="上海">上海</a><a href="/shangqiu/buy/" title="商丘">商丘</a><a href="/shantou/buy/" title="汕头">汕头</a><a href="/shaoxing/buy/" title="绍兴">绍兴</a><a href="/shaoyang/buy/" title="邵阳">邵阳</a><a href="/sy/buy/" title="沈阳">沈阳</a><a href="/sz/buy/" title="深圳">深圳</a><a href="/sjz/buy/" title="石家庄">石家庄</a><a href="/shiyan/buy/" title="十堰">十堰</a><a href="/songyuan/buy/" title="松原">松原</a><a href="/suining/buy/" title="遂宁">遂宁</a><a href="/suizhou/buy/" title="随州">随州</a><a href="/suqian/buy/" title="宿迁">宿迁</a><a href="/su/buy/" title="苏州">苏州</a><a href="/ahsuzhou/buy/" title="宿州">宿州</a></dd></dl><dl>
+                    <dt>T</dt>
+                    <dd>
+                        <a href="/taian/buy/" title="泰安">泰安</a><a href="/ty/buy/" title="太原">太原</a><a href="/zjtaizhou/buy/" title="台州">台州</a><a href="/jstaizhou/buy/" title="泰州">泰州</a><a href="/tangshan/buy/" title="唐山">唐山</a><a href="/tj/buy/" title="天津">天津</a><a href="/tongling/buy/" title="铜陵">铜陵</a><a href="/taicang/buy/" title="太仓">太仓</a><a href="/tanggu/buy/" title="塘沽">塘沽</a></dd></dl><dl>
+                    <dt>W</dt>
+                    <dd>
+                        <a href="/weifang/buy/" title="潍坊">潍坊</a><a href="/wei/buy/" title="威海">威海</a><a href="/weinan/buy/" title="渭南">渭南</a><a href="/wenzhou/buy/" title="温州">温州</a><a href="/wh/buy/" title="武汉">武汉</a><a href="/wuhu/buy/" title="芜湖">芜湖</a><a href="/xj/buy/" title="乌鲁木齐">乌鲁木齐</a><a href="/wx/buy/" title="无锡">无锡</a><a href="/wafangdian/buy/" title="瓦房店">瓦房店</a><a href="/wanzhou/buy/" title="万州">万州</a><a href="/wujiang/buy/" title="吴江">吴江</a><a href="/wuqing/buy/" title="武清">武清</a></dd></dl><dl>
+                    <dt>X</dt>
+                    <dd>
+                        <a href="/xm/buy/" title="厦门">厦门</a><a href="/xa/buy/" title="西安">西安</a><a href="/xiangtan/buy/" title="湘潭">湘潭</a><a href="/xiangyang/buy/" title="襄阳">襄阳</a><a href="/xianning/buy/" title="咸宁">咸宁</a><a href="/xiaogan/buy/" title="孝感">孝感</a><a href="/xingtai/buy/" title="邢台">邢台</a><a href="/xn/buy/" title="西宁">西宁</a><a href="/xinxiang/buy/" title="新乡">新乡</a><a href="/xinyang/buy/" title="信阳">信阳</a><a href="/xuchang/buy/" title="许昌">许昌</a><a href="/xuzhou/buy/" title="徐州">徐州</a></dd></dl><dl>
+                    <dt>Y</dt>
+                    <dd>
+                        <a href="/yancheng/buy/" title="盐城">盐城</a><a href="/yangjiang/buy/" title="阳江">阳江</a><a href="/yangzhou/buy/" title="扬州">扬州</a><a href="/yantai/buy/" title="烟台">烟台</a><a href="/yibin/buy/" title="宜宾">宜宾</a><a href="/yichang/buy/" title="宜昌">宜昌</a><a href="/jxyichun/buy/" title="宜春">宜春</a><a href="/yc/buy/" title="银川">银川</a><a href="/yingkou/buy/" title="营口">营口</a><a href="/yiyang/buy/" title="益阳">益阳</a><a href="/yueyang/buy/" title="岳阳">岳阳</a><a href="/yuncheng/buy/" title="运城">运城</a><a href="/yuxi/buy/" title="玉溪">玉溪</a><a href="/yiwugz/buy/" title="义乌">义乌</a><a href="/yixing/buy/" title="宜兴">宜兴</a><a href="/yongchuan/buy/" title="永川">永川</a><a href="/yunyang/buy/" title="云阳">云阳</a></dd></dl><dl>
+                    <dt>Z</dt>
+                    <dd>
+                        <a href="/zaozhuang/buy/" title="枣庄">枣庄</a><a href="/zhangzhou/buy/" title="漳州">漳州</a><a href="/zhanjiang/buy/" title="湛江">湛江</a><a href="/zhaoqing/buy/" title="肇庆">肇庆</a><a href="/zz/buy/" title="郑州">郑州</a><a href="/zhenjiang/buy/" title="镇江">镇江</a><a href="/zhongshan/buy/" title="中山">中山</a><a href="/zhuhai/buy/" title="珠海">珠海</a><a href="/zhumadian/buy/" title="驻马店">驻马店</a><a href="/zhuzhou/buy/" title="株洲">株洲</a><a href="/zibo/buy/" title="淄博">淄博</a><a href="/zigong/buy/" title="自贡">自贡</a><a href="/ziyang/buy/" title="资阳">资阳</a><a href="/zunyi/buy/" title="遵义">遵义</a><a href="/zhangjiagang/buy/" title="张家港">张家港</a></dd></dl></div>
+            </div>
+            <div class="header_phone fr" id="header_phone">
+                400-023-1529
+            </div>
+            <li class="spacer fr" id="spacer"></li>
+            <div class="register fr" id="openRegister1">
+                <a href="#" class="change_black">
+                    注册
+                </a>
+            </div>
+            <div class="login fr" id="openLogin1">
+                <a href="#" class="change_black">
+                    <i></i>
+                    登陆
+                </a>
+            </div>
+            <div class="nav-list fr">
+                <a href="#">毛豆新车</a>
+                <a href="#">花生金融</a>
+                <a href="intro.html">花生服务</a>
+                <a href="sell.html">我要卖车</a>
+                <a href="/buy">我要买车</a>
+                <a class="active" href="../index.html">首页</a>
+            </div>
+        </div>
+    </div>
+    <!--shortcut end-->

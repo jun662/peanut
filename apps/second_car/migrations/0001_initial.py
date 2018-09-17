@@ -2,13 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
@@ -38,9 +36,9 @@ class Migration(migrations.Migration):
                 ('license_plate_location', models.CharField(verbose_name='车辆所在地', max_length=20)),
                 ('drive', models.CharField(verbose_name='驱动类型', max_length=10)),
                 ('country', models.CharField(verbose_name='国别', max_length=10)),
+                ('car_price', models.DecimalField(verbose_name='二手车价格', max_digits=10, decimal_places=2)),
                 ('status', models.IntegerField(verbose_name='车辆出售状态', default=1, choices=[(0, '下线'), (1, '上线')])),
                 ('brand', models.ForeignKey(verbose_name='所属品牌', to='second_car.Brande')),
-                ('caruser', models.ForeignKey(verbose_name='所属用户', to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'verbose_name': '车辆细节',
@@ -83,10 +81,5 @@ class Migration(migrations.Migration):
                 'verbose_name': '轮播图',
                 'verbose_name_plural': '轮播图',
             },
-        ),
-        migrations.AddField(
-            model_name='cardetail',
-            name='stype',
-            field=models.ForeignKey(verbose_name='所属车型', to='second_car.CarStyle'),
         ),
     ]
